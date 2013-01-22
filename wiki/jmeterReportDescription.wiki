@@ -1,0 +1,111 @@
+#summary jmeterReport-1.0.x.pl is a perl script to analyze the JMeter AggregateReport jtl output file and create an html for a complete report and analysis of the results.
+
+|| *jmeterReport-1.0.x.pl* || is a perl script to analyze the JMeter AggregateReport jtl output file and create an html for a complete report and analysis of the results.||
+
+
+=Introduction=
+
+This perl script take as input the JMeter AggregateReport.jtl file (made by JMeter Listner Aggregate Report) and create a nice html report.
+
+
+= Report Features =
+
+== 1 jmeter Test General Data Overview ==
+
+ * Test Overview, Number of Request, Throughput Http Request (see: /images/screen-01.PNG)
+
+ * Jmeter Error Summary (see: /images/screen-02.PNG)
+
+ * Http Code Summary, Http Error Summary (see: /images/screen-03.PNG)
+
+
+== 2 Http/Https Request Detail ==
+
+(see: /images/screen-04.PNG)
+
+=== For every http/https request report: ===
+ * Number of request
+ * Statistics (Time and size): min, avg, max,90%, Avg Throughput
+ * Response time Graph (for every Http Code type) (see: /images/screen-13.PNG)
+ * Recap Request statistics Time (Table and Graph) (see: /images/screen-14.PNG)
+ * Recap Request statistics Size (Table and Graph) (see: /images/screen-15.PNG)
+
+== 3 Graph Result ==
+ * jmeter Request Activity (see:  /images/screen-05.PNG)
+ * jmeter Thread Activity (see: /images/screen-06.PNG)
+ * jmeter Http Request Elapsed (see: /images/screen-07.PNG)
+ * jmeter Throughput-Elapsed-Latency-IdleTime (see: /images/screen-08.PNG)
+ * jmeter Request Statistic Time(min,mean,90perc,max) (see: /images/screen-09.PNG)
+ * jmeter Request Statistic Size(min,mean,90perc,max) (see: images/screen-11.PNG)
+
+every graph show value (by pass over), do the zoom, show legend and let to show/hide the data line
+
+
+== To do this, you have to: ==
+
+*1) Download Flot library in order to have the graphs*
+(http://code.google.com/p/flot/)
+
+Flot is a pure Javascript plotting library for jQuery (relased under the term of MIT License).
+
+*1.a) Add jquery.flot.orderBars.js to standard flot lib.*
+
+Released under the MIT license by Benjamin BUFFET
+http://www.benjaminbuffet.com/public/js/jquery.flot.orderBars.js
+
+
+*2) Enable and configure JMeter AggregateReport Listner on your JMeter test (see Appendix A)*
+
+*3) Perform your test whith JMeter*
+
+now you have AggregateReport.jtl of your JMeter test
+
+*4) Run the script jmeterReport.pl*
+
+see all the script option in Appendix B or run:
+
+ ./jmeterReport-1.0.x.pl --help
+
+
+
+
+== Files and directory structure: ==
+{{{
+  ./Report/
+      README.txt                    
+      jmeterReport-1.0.x.pl         (the perl script)
+      ./example/jmTest.jmx          (example: test description)
+      ./example/AggregateReport.jtl (example: test data)
+      ./css/                        (styles)
+      ./flot/                       (flot lib; download and put here the library and jquery.flot.orderBars.js)
+}}}
+
+Run:
+
+*./jmeterReport-x-x-x.pl -a ./example/AggregateReport.jtl -e ./example/jmTest.jmx*
+
+     This create:
+{{{
+         ./jmReport/                    (default report directory)
+         ./jmReport/jmeterReport.html   (default report file)
+         ./jmReport/graph/              (default html graph directory)
+         ./jmReport/data/               (default data directory)
+}}}
+
+     Now you can view the result of your jmeter test in the report: jmeterReport.html
+
+
+That's all.
+
+
+
+
+
+
+-----------------------
+
+'License:'
+          This program may be freely redistributed and/or modified
+          under the terms of MIT License. 
+
+          flot lib and jquery.flot.orderBars.js is released under the term of MIT License.
