@@ -1,0 +1,49 @@
+#summary Jmeter AggregateReport fields options
+
+
+------------------------------------------------------
+Appendix A - Jmeter AggregateReport
+------------------------------------------------------
+=== jmeter AggregateReport - Select fields options: ====
+
+ * Open your test in JMeter;
+ * Add Listner: AggregateReport
+  ThreadGroup > add > Listner > Aggregate Report
+ * Set log File path and name:  /[your-path]/AggregateReport.jtl
+ * Configure the Listner:
+  AggregateReport > Configure
+
+
+  SampleResultSaveConfiguration.bmp
+
+||  [ ]  Save As XML                 || [[V]] Save Field Names (CSV)     ||  [ ]  Save Assertion Failure Message ||
+||  [ ]  Save Response Headers (XML) ||  [ ]  Save Request Headers (XML) ||  [ ]  Save Assertion Results (XML)   ||
+|| [[V]] Save Response Code          || [[V]] Save Data Type             ||  [ ]  Save Encoding                  ||
+|| [[V]] Save Label                  || [[V]] Save Latency               || [[V]] Save Response Message          ||
+||  [ ]  Save Response Data (XML)    ||  [ ]  Save Sampler Data (XML)    ||  [ ]  Save Sub results (XML)         ||
+|| [[V]] Save Success                || [[V]] Save Thread Name           || [[V]] Save Elapsed Time              ||
+|| [[V]] Save Time Stamp             || [[V]] Save URL                   || [[V]] Save byte count                ||
+||  [ ]  Save Response Filename      || [[V]] Save Active Thread Counts  ||  [ ]  Save Sample and error Counts   ||
+||  [ ]  Save Hostname               || [[V]] Save Idle Time             ||                                      ||
+
+
+
+
+
+
+    Instead of AggregateReport Listner You can use the "Simple Data Writer" Listner
+    (with the same Configuration option)
+    
+
+
+*Run JMeter test and check your AggregateReport.jtl file.*
+
+This must have this fields (CSV log format):
+
+*_timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,bytes,grpThreads,allThreads,URL,Latency,IdleTime_*
+
+2012/12/01 10:56:19.0887,316,/site/jsp/hp.jsp,200,OK,Thread Group 1-1,text,true,,58731,306
+
+or (timeStamp in epoch):
+
+1322736979887,316,/site/jsp/hp.jsp,200,OK,Thread Group 1-1,text,true,,58731,306
