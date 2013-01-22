@@ -1,0 +1,70 @@
+#summary One-sentence summary of this page.
+
+*jmeterReport-1.0.x.pl --help*
+
+Usage  : jmeterReport-1.0.x.pl [a|d|e|o|g|h]
+
+
+Command line options:
+---------------------
+{{{
+ -a AggregateRepor.jtl   --agg-report=AggregateReport.jtl     Jmeter AggregateReport file                        (Default: ./AggregateReport.jtl)
+ -d jmReport             --directory-report=jmReport          Jmeter Report Directory                            (Default: jmReport)
+ -e jmTest.jmx           --descripton=jmTest.jmx              Jmeter test file (used to write test description)  (Default: ./jmTest.jmx)
+ -o jmReport             --out-basename=jmeterReport          Jmeter Basename Report file                        (Default: jmeterReport.html)
+ -g (sec.)               --group-enabled=(sec.)               Enable group data on graph result(values in second)(Default: 1)
+                                                              ( 0 menas no group; display all values)
+ -h                      --help                               This help message
+}}}
+
+Internal options (set directly on script var):
+----------------------------------------------
+{{{
+ gFlag     = Y|N    to enable|disable graph          (default Y: enable graph)
+ gType     = B|L    to draw bar|line graph           (default L: line graph)
+ kByte     = Y|N    to write size data in kByte|byte (default Y: size data in kByte)
+ percValue = int [1-100] percentile value            (default 90)
+
+}}}
+
+Example:
+--------
+{{{
+ ./jmeterReport-1.0.x.pl -a /your-path/jmAggregateReport-A1.jtl -d jmReport20121201 -e /your-path/jmTest.jmx -o jmAggregateReport-A1 -g 60
+
+ -a Read test data from       : /your-path/jmAggregateReport-A1.jtl
+ -e Read test description from: /your-path/jmTest.jmx
+ -g 60                        : aggregate data by 60 sec.
+ -d Output result Directory   : ./jmReport20121201
+  write jmeter test report :
+          ./jmReport20121201/jmAggregateReport-A1.html
+          ./jmReport20121201/data/
+          ./jmReport20121201/graph/
+
+}}}
+
+Note:
+ When you have a lot of data use -g options to generate graph that your browser can manage.
+
+ (aggregate data is only for display graph; statistics values in tables are calculated on every single value)
+
+
+
+*Jmeter AggregateReport fields must be:*
+--------------------------------------
+ [_description_]:*timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,bytes,grpThreads,allThreads,URL,Latency,IdleTime*
+    [_example_] :2012/12/01 10:56:19.0887,316,/site/jsp/hp.jsp,200,OK,Thread Group 1-1,text,true,,58731,306
+ or [_example_] :1322736979887,316,/site/jsp/hp.jsp,200,OK,Thread Group 1-1,text,true,,58731,306
+
+
+*Dependencies:*
+-------------
+        This script need Flot library (and jquery.flot.orderBars.js) to generate html graph.
+        Flot is a pure Javascript plotting library for jQuery.
+
+
+*License:*
+--------
+        This script, flot lib and jquery.flot.orderBars.js is released under the term of MIT License.
+
+
