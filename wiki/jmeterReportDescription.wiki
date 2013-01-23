@@ -49,6 +49,9 @@ This perl script take as input the JMeter AggregateReport.jtl file (made by JMet
 every graph show value (by pass over), do the zoom, show legend and let to show/hide the data line
 
 
+
+----------------
+
 == To do this, you have to: ==
 
 *1) Download Flot library in order to have the graphs*
@@ -62,22 +65,32 @@ Released under the MIT license by Benjamin BUFFET
 http://www.benjaminbuffet.com/public/js/jquery.flot.orderBars.js
 
 
-*2) Enable and configure JMeter AggregateReport Listner on your JMeter test (see Appendix A)*
+*2) Enable and configure JMeter AggregateReport Listner on your JMeter test*
+(see: <a href="https://code.google.com/p/jmeter-report/wiki/AppendixA_Jmeter_AggregateReport_fields_options">AppendixA</a> )
+
+
 
 *3) Perform your test whith JMeter*
 
 now you have AggregateReport.jtl of your JMeter test
 
-*4) Run the script jmeterReport.pl*
+*4) Download and unzip jmeterReport.zip*
 
-see all the script option in Appendix B or run:
 
+*5) Run the script jmeterReport.pl*
+
+see all the script option
  ./jmeterReport-1.0.x.pl --help
 
+(see: <a href="https://code.google.com/p/jmeter-report/wiki/AppendixB_jmeterReport_help">AppendixB</a> )
 
 
 
-== Files and directory structure: ==
+
+
+----------
+
+== Zip files and directory structure: ==
 {{{
   ./Report/
       README.txt                    
@@ -88,7 +101,9 @@ see all the script option in Appendix B or run:
       ./flot/                       (flot lib; download and put here the library and jquery.flot.orderBars.js)
 }}}
 
-Run:
+------
+
+Example run:
 
 *./jmeterReport-x-x-x.pl -a ./example/AggregateReport.jtl -e ./example/jmTest.jmx*
 
