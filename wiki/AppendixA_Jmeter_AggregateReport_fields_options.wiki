@@ -14,18 +14,8 @@ Appendix A - Jmeter AggregateReport
   AggregateReport > Configure
 
 
-  SampleResultSaveConfiguration.bmp
 
-||  [ ]  Save As XML                 || [[V]] Save Field Names (CSV)     ||  [ ]  Save Assertion Failure Message ||
-||  [ ]  Save Response Headers (XML) ||  [ ]  Save Request Headers (XML) ||  [ ]  Save Assertion Results (XML)   ||
-|| [[V]] Save Response Code          || [[V]] Save Data Type             ||  [ ]  Save Encoding                  ||
-|| [[V]] Save Label                  || [[V]] Save Latency               || [[V]] Save Response Message          ||
-||  [ ]  Save Response Data (XML)    ||  [ ]  Save Sampler Data (XML)    ||  [ ]  Save Sub results (XML)         ||
-|| [[V]] Save Success                || [[V]] Save Thread Name           || [[V]] Save Elapsed Time              ||
-|| [[V]] Save Time Stamp             || [[V]] Save URL                   || [[V]] Save byte count                ||
-||  [ ]  Save Response Filename      || [[V]] Save Active Thread Counts  ||  [ ]  Save Sample and error Counts   ||
-||  [ ]  Save Hostname               || [[V]] Save Idle Time             ||                                      ||
-
+http://jmeter-report.googlecode.com/svn/wiki/images/SampleResultSaveConfiguration.PNG
 
 
 
