@@ -12,31 +12,39 @@ This perl script take as input the JMeter AggregateReport.jtl file (made by JMet
 
 == 1 jmeter Test General Data Overview ==
 
- * Test Overview, Number of Request, Throughput Http Request (see: /images/screen-01.PNG)
+ * Test Overview, Number of Request, Throughput Http Request (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-01.PNG">screen-01</a> )
 
- * Jmeter Error Summary (see: /images/screen-02.PNG)
 
- * Http Code Summary, Http Error Summary (see: /images/screen-03.PNG)
+
+ * Jmeter Error Summary (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-02.PNG">screen-02</a> )
+
+
+ * Http Code Summary, Http Error Summary (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-03.PNG">screen-03</a> )
 
 
 == 2 Http/Https Request Detail ==
+(see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-04.PNG">screen-04</a> )
 
-(see: /images/screen-04.PNG)
 
 === For every http/https request report: ===
  * Number of request
  * Statistics (Time and size): min, avg, max,90%, Avg Throughput
- * Response time Graph (for every Http Code type) (see: /images/screen-13.PNG)
- * Recap Request statistics Time (Table and Graph) (see: /images/screen-14.PNG)
- * Recap Request statistics Size (Table and Graph) (see: /images/screen-15.PNG)
+ * Response time Graph (for every Http Code type) (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-13.PNG">screen-13</a> )
+
+ * Recap Request statistics Time (Table and Graph) (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-14.PNG">screen-14</a> )
+
+ * Recap Request statistics Size (Table and Graph) (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-15.PNG">screen-15</a> )
+
 
 == 3 Graph Result ==
- * jmeter Request Activity (see:  /images/screen-05.PNG)
- * jmeter Thread Activity (see: /images/screen-06.PNG)
- * jmeter Http Request Elapsed (see: /images/screen-07.PNG)
- * jmeter Throughput-Elapsed-Latency-IdleTime (see: /images/screen-08.PNG)
- * jmeter Request Statistic Time(min,mean,90perc,max) (see: /images/screen-09.PNG)
- * jmeter Request Statistic Size(min,mean,90perc,max) (see: images/screen-11.PNG)
+ * jmeter Request Activity (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-05.PNG">screen-05</a> )
+ * jmeter Thread Activity (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-06.PNG">screen-06</a> )
+ * jmeter Http Request Elapsed (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-07.PNG">screen-07</a> )
+
+ * jmeter Throughput-Elapsed-Latency-IdleTime (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-08.PNG">screen-08</a> )
+ * jmeter Request Statistic Time(min,mean,90perc,max) (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-09.PNG">screen-09</a> )
+
+ * jmeter Request Statistic Size(min,mean,90perc,max) (see: <a href="http://jmeter-report.googlecode.com/svn/wiki/images/screen-11.PNG">screen-11</a> )
 
 every graph show value (by pass over), do the zoom, show legend and let to show/hide the data line
 
