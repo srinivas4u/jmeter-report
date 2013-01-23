@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary jmeterReport help file.
 
 *jmeterReport-1.0.x.pl --help*
 
