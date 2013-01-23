@@ -97,7 +97,7 @@ see all the script option
       jmeterReport-1.0.x.pl         (the perl script)
       ./example/jmTest.jmx          (example: test description)
       ./example/AggregateReport.jtl (example: test data)
-      ./example/AggregateReport.jtl (example: test data)
+      ./example/screen/             (report screen examples)
       ./css/                        (styles)
       ./flot/                       (flot lib; download and put here the library and jquery.flot.orderBars.js)
 }}}
