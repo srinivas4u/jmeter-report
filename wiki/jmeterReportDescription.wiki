@@ -92,7 +92,7 @@ see all the script option
 
 == Zip files and directory structure: ==
 {{{
-  ./Report/
+  ./jmReport/
       README.txt                    
       jmeterReport-1.0.x.pl         (the perl script)
       ./example/jmTest.jmx          (example: test description)
